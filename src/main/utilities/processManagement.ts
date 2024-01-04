@@ -1,12 +1,12 @@
 import {homeDir, emptySpace, platform, windowsPlatform, linuxPlatform, macPlatform} from "../../constants";
 import * as child_process from "child_process";
 
-const createChildProcess = (installCommand: string, installArgs: string, optionalLoggingCallback: any, optionalGenericSuccessCallback: any): child_process.ChildProcessWithoutNullStreams => {
+const createChildProcess = (execCommand: string, execArgs: string, optionalLoggingCallback: any, optionalGenericSuccessCallback: any): child_process.ChildProcessWithoutNullStreams => {
     const pathVariables = process.env.PATH;
-    let installOptions: object = null;
+    let execOptions: object = null;
     switch (platform) {
         case windowsPlatform:
-            installOptions = {
+            execOptions = {
                 env: {
                     ...process.env,
                     HOMEDRIVE: "C:/",
@@ -16,7 +16,7 @@ const createChildProcess = (installCommand: string, installArgs: string, optiona
             break;
         case linuxPlatform:
         case macPlatform:
-            installOptions = {
+            execOptions = {
                 env: {
                     ...process.env,
                     PATH: pathVariables
@@ -24,7 +24,7 @@ const createChildProcess = (installCommand: string, installArgs: string, optiona
             }
             break;
     }
-    return child_process.exec(installCommand + emptySpace + installArgs, installOptions, (error: Error, stdout: string, stderr: string) => {
+    return child_process.exec(execCommand + emptySpace + execArgs, execOptions, (error: Error, stdout: string, stderr: string) => {
         if (error) {
             if (optionalLoggingCallback) {
                 optionalLoggingCallback(error.message);
