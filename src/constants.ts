@@ -5,7 +5,7 @@ const macPlatform: NodeJS.Platform = 'darwin';
 const windowsPlatform: NodeJS.Platform = 'win32';
 const linuxPlatform: NodeJS.Platform = 'linux';
 const homeDir: string = os.homedir();
-const emptySpace: string = ' ';
+const emptySpace = ' ';
 
 export {
     platform,

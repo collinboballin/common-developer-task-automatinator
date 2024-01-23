@@ -15,15 +15,21 @@
   "author": {
     "name": "Chance Stovall"
   },
+  "browser": {
+    "child_process": false
+  },
+  "config": {
+    "forge": "./forge.config.js"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@electron-forge/cli": "^7.2.0",
-    "@electron-forge/maker-deb": "^7.2.0",
-    "@electron-forge/maker-rpm": "^7.2.0",
-    "@electron-forge/maker-squirrel": "^7.2.0",
-    "@electron-forge/maker-zip": "^7.2.0",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
-    "@electron-forge/plugin-webpack": "^7.2.0",
+    "@electron-forge/cli": "^6.4.1",
+    "@electron-forge/maker-deb": "^6.4.1",
+    "@electron-forge/maker-rpm": "^6.4.1",
+    "@electron-forge/maker-squirrel": "^6.4.1",
+    "@electron-forge/maker-zip": "^6.4.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
+    "@electron-forge/plugin-webpack": "^6.4.1",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
@@ -45,6 +51,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.3",
     "electron-squirrel-startup": "^1.0.0",
+    "history": "5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"

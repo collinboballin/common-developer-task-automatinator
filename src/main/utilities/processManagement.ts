@@ -1,4 +1,4 @@
-import {homeDir, emptySpace, platform, windowsPlatform, linuxPlatform, macPlatform} from "../../constants";
+import {emptySpace, platform, windowsPlatform, linuxPlatform, macPlatform} from "../../constants";
 import * as child_process from "child_process";
 
 const createChildProcess = (execCommand: string, execArgs: string, optionalLoggingCallback: any, optionalGenericSuccessCallback: any): child_process.ChildProcessWithoutNullStreams => {
